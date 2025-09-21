@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Add this -->
+  <title>Your Page Title</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workout Generator</title>
+  <link rel="stylesheet" href="workout.css"> <!-- Link to the workout.css file -->
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <img src="logo.png" alt="NutriCore Logo" class="logo-img">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="workout.html">Workout</a></li>
+        <li><a href="mindfulness.html">Mindfulness</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Workout Generator Content -->
+  <div class="workout-container">
+    <h2>Workout Generator</h2>
+
+    <!-- Form to Select Body Part and Equipment -->
+    <form id="workout-form">
+      <div class="input-group">
+        <label for="body-part">Target Body Part:</label>
+        <select id="body-part" required>
+          <option value="full-body">Full Body</option>
+          <option value="arms">Arms</option>
+          <option value="legs">Legs</option>
+          <option value="core">Core</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="equipment">Available Equipment:</label>
+        <select id="equipment" required>
+          <option value="none">No Equipment</option>
+          <option value="dumbbells">Dumbbells</option>
+          <option value="resistance-bands">Resistance Bands</option>
+          <option value="full-gym">Full Gym</option>
+        </select>
+      </div>
+
+      <button type="submit">Generate Workout</button>
+    </form>
+
+    <!-- Workout Plan Display -->
+    <div id="workout-plan" class="workout-plan" style="display:none;">
+      <h3>Your Workout Plan:</h3>
+      <div id="exercises">
+        <!-- Dynamically added exercise cards -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        <h2>NutriCore</h2>
+        <p>Your partner in healthy living through balanced nutrition, exercise, and mindfulness.</p>
+      </div>
+      <div class="footer-right">
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+            <li><a href="workout.html">Workout</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Wellness</h3>
+          <ul>
+            <li><a href="mindfulness.html">Mindfulness</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+            <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+            <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 NutriCore. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="workout.js"></script> <!-- Link to JS -->
+</body>
+</html>

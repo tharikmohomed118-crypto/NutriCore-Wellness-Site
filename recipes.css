@@ -1,0 +1,728 @@
+/* Header */
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 30px 20px;           /* Use 30px 20px for height consistency */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo-img {
+  width: 150px;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  border-bottom: 2px solid white;
+}
+
+
+/* recipe-card*/
+.recipe-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+
+/* Recipe Card Base */
+.recipe-card {
+  width: 340px;
+  height: 260px;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* Unique Card Colors */
+.recipe-card.smoothie { background-color: #A8E6CF; }
+.recipe-card.buddha { background-color: #FFD3B6; }
+.recipe-card.salmon { background-color: #FFAAA5; }
+.recipe-card.energy { background-color: #D0E1FF; }
+
+
+
+/* Responsive Styles for Footer */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .footer-right {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    footer .footer-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Smoothie Card */
+.recipe-card.buddha {
+  width: 340px;
+  height: 260px;
+  background-color: #FFD3B6; 
+  border-radius: 10px;
+  padding: 16px;
+  margin: 20px auto;
+  text-align: center;
+  cursor: pointer;
+
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  background: #fff;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+}
+
+/* Close Button */
+.close-button {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close-button:hover { color: red; }
+
+/* Top Box with Image + Text */
+.smoothie-top-box {
+  width: 340px;
+  height: 230px;
+  margin: 0 auto 20px;
+  background-color: #FFD3B6;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.smoothie-top-box img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+.smoothie-text h3 { margin-bottom: 4px; }
+.smoothie-text p, .smoothie-text strong { margin-bottom: 2px; font-size: 14px; }
+
+/* Modal Body */
+.modal-body {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  text-align: left;
+}
+.modal-body .ingredients, .modal-body .instructions { width: 48%; }
+.modal-body h3 { color: #4CAF50; margin-bottom: 6px; }
+.modal-body ul, .modal-body ol { margin-left: 20px; }
+
+/* Nutrition Table */
+.nutrition { margin-top: 15px; }
+.nutrition table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.nutrition td {
+  border: 1px solid #ccc;
+  padding: 6px;
+}
+.nutrition h3 {
+  color: #4CAF50;
+  margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
+footer .footer-left { max-width: 300px; }
+footer .footer-right {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+footer .footer-section { width: 200px; }
+footer .footer-section h3 { color: #4CAF50; }
+footer .footer-section ul { list-style: none; padding-left: 0; }
+footer .footer-section ul li { margin: 10px 0; }
+footer .footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+footer .footer-section ul li a:hover { color: #4CAF50; }
+footer .footer-bottom {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .search-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .recipe-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-body {
+    flex-direction: column;
+  }
+
+  .modal-body .ingredients,
+  .modal-body .instructions {
+    width: 100%;
+  }
+
+  footer .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer .footer-right {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  footer .footer-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+
+
+/* Salmon Card */
+.recipe-card.salmon {
+  width: 340px;
+  height: 260px;
+  background-color: #FFAAA5; /* Salmon Color */
+  border-radius: 10px;
+  padding: 16px;
+  margin: 20px auto;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  background: #fff;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 650px; /* Salmon modal width */
+}
+
+/* Close Button */
+.close-button {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close-button:hover {
+  color: red;
+}
+
+/* Smoothie Top Box */
+.smoothie-top-box {
+  width: 420px;
+  height: 150px;
+  margin: 0 auto 20px;
+  background-color: #FFAAA5;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.smoothie-top-box img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+.smoothie-text h3 {
+  margin-bottom: 4px;
+}
+.smoothie-text p, .smoothie-text strong {
+  margin-bottom: 2px;
+  font-size: 14px;
+}
+
+/* Modal Body */
+.modal-body {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.modal-body .ingredients, .modal-body .instructions {
+  width: 48%;
+}
+.modal-body h3 {
+  color: #4CAF50;
+  margin-bottom: 6px;
+}
+.modal-body ul, .modal-body ol {
+  margin-left: 20px;
+}
+
+/* Nutrition Table */
+.nutrition {
+  margin-top: 15px;
+}
+.nutrition table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.nutrition td {
+  border: 1px solid #ccc;
+  padding: 6px;
+}
+.nutrition h3 {
+  color: #4CAF50;
+  margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
+footer .footer-left {
+  max-width: 300px;
+}
+footer .footer-right {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+footer .footer-section {
+  width: 200px;
+}
+footer .footer-section h3 {
+  color: #4CAF50;
+}
+footer .footer-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+footer .footer-section ul li {
+  margin: 10px 0;
+}
+footer .footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+footer .footer-section ul li a:hover {
+  color: #4CAF50;
+}
+footer .footer-bottom {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .search-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .recipe-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-body {
+    flex-direction: column;
+  }
+
+  .modal-body .ingredients,
+  .modal-body .instructions {
+    width: 100%;
+  }
+
+  footer .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer .footer-right {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  footer .footer-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+/* Energy Balls Card */
+.recipe-card.energy {
+  width: 340px;
+  height: 260px;
+  background-color: #D0E1FF; /* Blue for Energy Balls */
+  border-radius: 10px;
+  padding: 16px;
+  margin: 20px auto;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  background: #fff;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+}
+
+/* Close Button */
+.close-button {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close-button:hover {
+  color: red;
+}
+
+/* Smoothie Top Box */
+.smoothie-top-box {
+  width: 340px;
+  height: 230px;
+  margin: 0 auto 20px;
+  background-color: #D0E1FF;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.smoothie-top-box img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+.smoothie-text h3 {
+  margin-bottom: 4px;
+}
+.smoothie-text p, .smoothie-text strong {
+  margin-bottom: 2px;
+  font-size: 14px;
+}
+
+/* Modal Body */
+.modal-body {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.modal-body .ingredients, .modal-body .instructions {
+  width: 48%;
+}
+.modal-body h3 {
+  color: #4CAF50;
+  margin-bottom: 6px;
+}
+.modal-body ul, .modal-body ol {
+  margin-left: 20px;
+}
+
+/* Nutrition Table */
+.nutrition {
+  margin-top: 15px;
+}
+.nutrition table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.nutrition td {
+  border: 1px solid #ccc;
+  padding: 6px;
+}
+.nutrition h3 {
+  color: #4CAF50;
+  margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
+footer .footer-left {
+  max-width: 300px;
+}
+footer .footer-right {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+footer .footer-section {
+  width: 200px;
+}
+footer .footer-section h3 {
+  color: #4CAF50;
+}
+footer .footer-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+footer .footer-section ul li {
+  margin: 10px 0;
+}
+footer .footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+footer .footer-section ul li a:hover {
+  color: #4CAF50;
+}
+footer .footer-bottom {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .search-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .recipe-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-body {
+    flex-direction: column;
+  }
+
+  .modal-body .ingredients,
+  .modal-body .instructions {
+    width: 100%;
+  }
+
+  footer .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer .footer-right {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  footer .footer-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%;
+    max-width: 1200px; 
+    margin-bottom: 20px;
+}
+
+/* Left side (website title and description) */
+footer .footer-left {
+    max-width: 300px;
+}
+
+/* Right side (quick links, wellness, and connect) */
+footer .footer-right {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Each section (quick links, wellness, and connect) */
+footer .footer-section {
+    width: 200px;
+}
+
+footer .footer-section h3 {
+    color: #4CAF50;
+}
+
+footer .footer-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+footer .footer-section ul li {
+    margin: 10px 0;
+}
+
+footer .footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer .footer-section ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Footer Bottom (Copyright) */
+footer .footer-bottom {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    margin-top: 20px; 
+}
+
+
+
+

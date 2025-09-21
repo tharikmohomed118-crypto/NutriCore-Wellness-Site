@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Your Page Title</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calorie & Nutrition Calculator</title>
+  <link rel="stylesheet" href="calculator.css"> 
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <img src="logo.png" alt="NutriCore Logo" class="logo-img">
+    
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="workout.html">Workout</a></li>
+        <li><a href="mindfulness.html">Mindfulness</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Calorie & Nutrition Calculator Content -->
+  <div class="calculator">
+    <h2>Calorie & Nutrition Calculator</h2>
+
+    <!-- Form -->
+    <form id="calculator-form">
+      <div class="input-group">
+        <label for="age">Age (years):</label>
+        <input type="number" id="age" required>
+      </div>
+
+      <div class="input-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" required>
+      </div>
+
+      <div class="input-group">
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" required>
+      </div>
+
+      <div class="input-group">
+        <label for="activity-level">Activity Level:</label>
+        <select id="activity-level" required>
+          <option value="1.2">Sedentary (little to no exercise)</option>
+          <option value="1.375">Lightly active (light exercise)</option>
+          <option value="1.55">Moderately active (moderate exercise)</option>
+          <option value="1.725">Very active (hard exercise)</option>
+          <option value="1.9">Super active (very hard exercise)</option>
+        </select>
+      </div>
+
+      <button type="submit">Calculate</button>
+    </form>
+
+    <!-- Results -->
+    <div id="results" class="results" style="display:none;">
+      <h3>Your Results:</h3>
+      <div class="result-box" id="bmr">
+        <h4>BMR</h4>
+        <p id="bmr-value"></p>
+      </div>
+      <div class="result-box" id="tdee">
+        <h4>TDEE</h4>
+        <p id="tdee-value"></p>
+      </div>
+      <div class="result-box" id="macros">
+        <h4>Macronutrients</h4>
+        <p id="carbs-value">Carbs: <span></span> g</p>
+        <p id="protein-value">Protein: <span></span> g</p>
+        <p id="fat-value">Fat: <span></span> g</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        <h2>NutriCore</h2>
+        <p>Your partner in healthy living through balanced nutrition, exercise, and mindfulness.</p>
+      </div>
+      <div class="footer-right">
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+            <li><a href="workout.html">Workout</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Wellness</h3>
+          <ul>
+            <li><a href="mindfulness.html">Mindfulness</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+            <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+            <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 NutriCore. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

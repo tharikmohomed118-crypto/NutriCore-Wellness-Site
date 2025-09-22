@@ -1,0 +1,432 @@
+
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+/* Header */
+header {
+
+  background-color: #4CAF50;
+  color: white;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo-img {
+  width: 150px;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  border-bottom: 2px solid white;
+}
+
+.hero-img-hero {
+  position: relative;
+  min-height: 330px;
+  width: 100%;
+  background: url('img1.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 44px 0;
+}
+
+.hero-img-overlay {
+  background: rgba(44, 162, 95, 0.85);
+  padding: 38px 32px 32px 32px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  min-width: 300px;
+  max-width: 600px;
+  margin: 0 22px;
+}
+
+.hero-title {
+  font-size: 2.7rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.hero-slogan {
+  font-size: 1.55rem;
+  font-weight: 600;
+  color: #fffbea;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .hero-img-hero { min-height: 160px; }
+  .hero-img-overlay { padding: 18px 6px;}
+  .hero-title { font-size: 1.3rem; }
+  .hero-slogan { font-size: 1rem; }
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px);}
+  to   { opacity: 1; transform: translateY(0);}
+}
+
+@media (max-width: 600px) {
+  .hero-section { height: 250px;}
+  .hero-overlay { padding: 18px 10px;}
+  .hero-title { font-size: 1.6rem;}
+  .hero-slogan { font-size: 1.1rem;}
+}
+
+
+/* Animation for Text */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Health Tip Section */
+.health-tip {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.health-tip h3 {
+  font-size: 28px;
+}
+
+.health-tip p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Everything You Need for Healthy Living Section */
+.everything {
+  text-align: center;
+  margin: 40px 0;
+  padding: 20px;
+}
+
+.everything h3 {
+  font-size: 30px;
+  color: #4CAF50;
+}
+
+.feature-cards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.box {
+  width: 300px;
+  height: 150px;
+  padding: 16px 24px;
+  margin: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  background-color: white;
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+}
+
+.box h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.box p {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
+
+footer .footer-left {
+  max-width: 300px;
+}
+
+footer .footer-right {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+footer .footer-section {
+  width: 200px;
+}
+
+footer .footer-section h3 {
+  color: #4CAF50;
+}
+
+footer .footer-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+footer .footer-section ul li {
+  margin: 10px 0;
+}
+
+footer .footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer .footer-section ul li a:hover {
+  color: #4CAF50;
+}
+
+footer .footer-bottom {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  margin-top: 20px;
+}
+.footer-newsletter input[type="email"] {
+  padding: 8px;
+  width: 200px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+.footer-newsletter button {
+  padding: 8px 16px;
+  border: none;
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.footer-newsletter button:hover {
+  background: #369a30;
+}
+.footer-bottom {
+  font-size: 0.9em;
+  border-top: 1px solid #555;
+  padding-top: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  footer .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer .footer-right {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  footer .footer-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* Header */
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; 
+}
+
+header .logo h1 {
+  font-size: 28px; 
+}
+
+/* Mobile Header: Stack nav items */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+}
+
+
+/* Example of a responsive content container */
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.container .card {
+  width: 100%;
+  max-width: 300px; 
+  margin: 10px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .container .card {
+    width: 100%; 
+  }
+}
+
+
+
+/* Make images responsive */
+img {
+  width: 100%; 
+  height: auto; 
+}
+
+
+/* Navigation bar */
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+/* Mobile navigation - Stack links vertically */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-bottom: 10px; /
+  }
+}
+
+
+/* Buttons */
+button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive button styles for mobile */
+@media (max-width: 768px) {
+  button {
+    width: 100%; /* Full width button */
+  }
+}
+
+
+
+/* mobile style*/
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  nav ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  .container, .recipe-card, .workout-container {
+    width: 100%;
+    padding: 10px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  button {
+    width: 100%;
+    font-size: 18px;
+    padding: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .feature-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .box {
+    width: 90%;
+    margin: 12px 0;
+  }
+  .slider-text { 
+    font-size: 28px; 
+    left: 5%; 
+    max-width: 90%; 
+    padding: 12px;
+  }
+}

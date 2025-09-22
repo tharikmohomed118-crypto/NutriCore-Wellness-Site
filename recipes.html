@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriCore - Healthy Recipes</title>
+  <link rel="stylesheet" href="recipes.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico.png">
+
+</head>
+
+
+<body>
+
+  <!-- Header Section -->
+  <header>
+   <img src="logo.png" alt="NutriCore Logo" class="logo-img">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="workout.html">Workout</a></li>
+        <li><a href="mindfulness.html">Mindfulness</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Headline -->
+<div class="search-header">
+  <h1>Healthy Recipes</h1>
+  <div class="search-controls">
+    <input type="text" placeholder="Search recipes...">
+    <select>
+      <option>Filter by category</option>
+      <option>Breakfast</option>
+      <option>Lunch</option>
+      <option>Dinner</option>
+      <option>Snack</option>
+    </select>
+    <!-- If you have separate buttons for categories, add them here too -->
+    <!-- <button>Breakfast</button> ... -->
+  </div>
+</div>
+
+
+  <!-- Recipe Cards Section -->
+<section class="recipe-cards">
+  <!-- Smoothie Card -->
+  <div class="recipe-card smoothie">
+    <h3>🥤 Smoothie</h3>
+    <p>Breakfast - 250 kcal</p>
+    <strong>Green Smoothie</strong>
+    <p>Spinach, banana, protein powder</p>
+  </div>
+
+  <!-- Lentil Soup Card (replaces Buddha Bowl) -->
+<div class="recipe-card buddha">
+  <h3>🥣 Lentil Soup</h3>
+  <p>Lunch - 350 kcal</p>
+  <strong>Hearty Lentil Soup</strong>
+  <p>Nutritious soup with lentils, vegetables, and spices</p>
+</div>
+
+
+  <!-- Salmon Card -->
+  <div class="recipe-card salmon">
+    <h3>🐟 Salmon</h3>
+    <p>Dinner - 500 kcal</p>
+    <strong>Omega-3 Salmon Fillet</strong>
+    <p>Fresh herbs and lemon</p>
+  </div>
+
+  <!-- Energy Balls Card -->
+  <div class="recipe-card energy">
+    <h3>🍫 Energy Balls</h3>
+    <p>Snack - 150 kcal</p>
+    <strong>No-Bake Energy Balls</strong>
+    <p>Dates, nuts, and dark chocolate</p>
+  </div>
+</section>
+
+
+  <!-- Smoothie Modal -->
+  <div id="smoothie-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <div class="smoothie-top-box">
+        <img src="https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" alt="Green Power Smoothie">
+        <div class="smoothie-text">
+          <h3>🥤 Smoothie</h3>
+          <p>Breakfast - 250 kcal</p>
+          <strong>Green Smoothie</strong>
+          <p>Spinach, banana, protein powder</p>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="ingredients">
+          <h3>Ingredients</h3>
+          <ul>
+            <li>2 cups fresh spinach</li>
+            <li>1 frozen banana</li>
+            <li>1 cup almond milk</li>
+            <li>1 scoop vanilla protein powder</li>
+            <li>1 tbsp almond butter</li>
+            <li>1 tsp honey</li>
+            <li>Ice cubes</li>
+          </ul>
+        </div>
+        <div class="instructions">
+          <h3>Instructions</h3>
+          <ol>
+            <li>Add spinach and almond milk to blender first</li>
+            <li>Add frozen banana and protein powder</li>
+            <li>Add almond butter and honey</li>
+            <li>Blend on high for 60 seconds until smooth</li>
+            <li>Add ice cubes and blend for another 30 seconds</li>
+            <li>Pour into glass and serve immediately</li>
+          </ol>
+        </div>
+      </div>
+      <div class="nutrition">
+        <h3>Nutrition Information</h3>
+        <table>
+          <tr><td>Calories</td><td>285</td></tr>
+          <tr><td>Protein</td><td>25g</td></tr>
+          <tr><td>Carbohydrates</td><td>32g</td></tr>
+          <tr><td>Fat</td><td>8g</td></tr>
+          <tr><td>Fiber</td><td>6g</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <h2>GreenBite</h2>
+                <p>Your partner in healthy living through balanced nutrition, exercise, and mindfulness.</p>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#recipes">Recipes</a></li>
+                        <li><a href="#calculator">Calculator</a></li>
+                        <li><a href="#workout">Workout</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Wellness</h3>
+                    <ul>
+                        <li><a href="#mindfulness">Mindfulness</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <p>Follow us for daily health tips and inspiration.</p>
+                    <ul>
+                        <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                        <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                        <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+          <div class="footer-newsletter">
+      <h3>Subscribe to our Newsletter</h3>
+      <form id="newsletter-form">
+        <input type="email" id="email-input" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="subscription-message"></p>
+    </div>
+  </div>
+
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 GreenBite. All rights reserved.</p>
+        </div>
+    </footer>
+
+  <script src="recipes.js"></script>
+</body>
+</html>
+
+
+<!-- Lentil Soup Modal (replaces Buddha Bowl Modal) -->
+<div id="buddha-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <!-- Top Box with Image + Text -->
+    <div class="smoothie-top-box">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&auto=format&fit=crop&q=60" alt="Lentil Soup">
+      <div class="smoothie-text">
+        <h3>🥣 Lentil Soup</h3>
+        <p>Lunch - 350 kcal</p>
+        <strong>Hearty Lentil Soup</strong>
+        <p>Nutritious soup with lentils, vegetables, and spices</p>
+      </div>
+    </div>
+    <!-- Ingredients & Instructions -->
+    <div class="modal-body">
+      <div class="ingredients">
+        <h3>Ingredients</h3>
+        <ul>
+          <li>1 cup dried lentils</li>
+          <li>1 carrot, chopped</li>
+          <li>1 celery stalk, chopped</li>
+          <li>1 onion, diced</li>
+          <li>2 cloves garlic, minced</li>
+          <li>4 cups vegetable broth</li>
+          <li>1 tsp cumin</li>
+          <li>1 tsp paprika</li>
+          <li>Salt and pepper to taste</li>
+        </ul>
+      </div>
+      <div class="instructions">
+        <h3>Instructions</h3>
+        <ol>
+          <li>Rinse lentils and set aside.</li>
+          <li>In a large pot, sauté onion, carrot, celery, and garlic until soft.</li>
+          <li>Add lentils, broth, and spices. Bring to a boil.</li>
+          <li>Reduce heat. Simmer for 25–30 minutes until lentils are tender.</li>
+          <li>Season with salt and pepper. Serve hot and enjoy!</li>
+        </ol>
+      </div>
+    </div>
+    <!-- Nutrition Table -->
+    <div class="nutrition">
+      <h3>Nutrition Information</h3>
+      <table>
+        <tr><td>Calories</td><td>350</td></tr>
+        <tr><td>Protein</td><td>22g</td></tr>
+        <tr><td>Carbohydrates</td><td>48g</td></tr>
+        <tr><td>Fat</td><td>6g</td></tr>
+        <tr><td>Fiber</td><td>16g</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Salmon Card -->
+<!-- Salmon Modal -->
+<div id="salmon-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+
+    <!-- Top Box with Image + Text -->
+    <div class="smoothie-top-box">
+      <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" alt="Salmon with Herbs">
+      <div class="smoothie-text">
+        <h3>🐟 Salmon</h3>
+        <p>Dinner - 500 kcal</p>
+        <strong>Omega-3 Salmon Fillet</strong>
+        <p>Fresh herbs and lemon</p>
+      </div>
+    </div>
+
+    <!-- Ingredients & Instructions -->
+    <div class="modal-body">
+      <div class="ingredients">
+        <h3>Ingredients</h3>
+        <ul>
+          <li>4 salmon fillets</li>
+          <li>Olive oil</li>
+          <li>Garlic</li>
+          <li>Lemon</li>
+          <li>Fresh herbs (parsley, thyme)</li>
+          <li>Asparagus</li>
+          <li>Salt and pepper</li>
+        </ul>
+      </div>
+      <div class="instructions">
+        <h3>Instructions</h3>
+        <ol>
+          <li>Preheat oven to 375°F (190°C).</li>
+          <li>Prepare a baking sheet lined with parchment paper.</li>
+          <li>Season the salmon fillets with olive oil, salt, and pepper.</li>
+          <li>Top with garlic, lemon slices, and fresh herbs.</li>
+          <li>Arrange asparagus around the salmon.</li>
+          <li>Bake for 12-15 minutes or until salmon flakes easily with a fork.</li>
+          <li>Serve immediately with your choice of sides.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Nutrition Information Table -->
+    <div class="nutrition">
+      <h3>Nutrition Information</h3>
+      <table>
+        <tr><td>Calories</td><td>380</td></tr>
+        <tr><td>Protein</td><td>42g</td></tr>
+        <tr><td>Carbohydrates</td><td>8g</td></tr>
+        <tr><td>Fat</td><td>20g</td></tr>
+        <tr><td>Fiber</td><td>4g</td></tr>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- Energy Balls Card -->
+
+<!-- Energy Balls Modal -->
+<div id="energy-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+
+    <!-- Top Box with Image + Text -->
+    <div class="smoothie-top-box">
+      <img src="https://images.unsplash.com/photo-1678554500191-3885a6fbf8c2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZW5lcmd5JTIwYmFsbHN8ZW58MHx8MHx8fDA%3D" alt="Energy Balls">
+      <div class="smoothie-text">
+        <h3>🍫 Energy Balls</h3>
+        <p>Snack - 150 kcal</p>
+        <strong>No-Bake Energy Balls</strong>
+        <p>Dates, nuts, and dark chocolate</p>
+      </div>
+    </div>
+
+    <!-- Ingredients & Instructions -->
+    <div class="modal-body">
+      <div class="ingredients">
+        <h3>Ingredients</h3>
+        <ul>
+          <li>1 cup dates (pitted)</li>
+          <li>1/2 cup almonds</li>
+          <li>1/2 cup oats</li>
+          <li>2 tbsp chia seeds</li>
+          <li>1/4 cup dark chocolate chips</li>
+          <li>1 tbsp peanut butter</li>
+          <li>1 tsp vanilla extract</li>
+        </ul>
+      </div>
+      <div class="instructions">
+        <h3>Instructions</h3>
+        <ol>
+          <li>Add all ingredients to a food processor.</li>
+          <li>Pulse until a sticky dough forms.</li>
+          <li>Roll dough into small balls.</li>
+          <li>Refrigerate for 30 minutes to firm up.</li>
+          <li>Serve and enjoy!</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Nutrition Information Table -->
+    <div class="nutrition">
+      <h3>Nutrition Information</h3>
+      <table>
+        <tr><td>Calories</td><td>150</td></tr>
+        <tr><td>Protein</td><td>5g</td></tr>
+        <tr><td>Carbohydrates</td><td>20g</td></tr>
+        <tr><td>Fat</td><td>8g</td></tr>
+        <tr><td>Fiber</td><td>5g</td></tr>
+      </table>
+    </div>
+
+  </div>
+</div>
